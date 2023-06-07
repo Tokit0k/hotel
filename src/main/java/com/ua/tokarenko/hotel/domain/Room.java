@@ -10,7 +10,7 @@ import java.util.List;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "rooms")
+@Table
 public class Room {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,7 +18,7 @@ public class Room {
     @Column
     private Long numberRoom;
     @Column
-    private Long number_of_beds;
+    private Long numberOfBeds;
     @Column
     private Long price;
     @Column

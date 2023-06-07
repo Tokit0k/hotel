@@ -7,15 +7,14 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
-import java.util.List;
+
 
 @Data
 @Builder
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-
-@Table(name = "reservations")
+@Table
 public class Reservation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
