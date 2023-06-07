@@ -1,9 +1,9 @@
 package com.ua.tokarenko.hotel.dto;
 
-import com.ua.tokarenko.hotel.domain.Guest;
-import com.ua.tokarenko.hotel.domain.Room;
 import lombok.Data;
 import lombok.Builder;
+import com.ua.tokarenko.hotel.domain.Guest;
+import com.ua.tokarenko.hotel.domain.Room;
 
 import java.util.Date;
 

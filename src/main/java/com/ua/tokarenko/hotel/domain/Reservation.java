@@ -1,19 +1,18 @@
 package com.ua.tokarenko.hotel.domain;
 
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
-
-@Data
-@Builder
-@Entity
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
+@Builder
+@Data
+@Entity
 @Table
 public class Reservation {
     @Id

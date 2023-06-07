@@ -5,11 +5,11 @@ import lombok.*;
 
 import java.util.List;
 
-@Data
-@Builder
-@Entity
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
+@Entity
+@Data
 @Table
 public class Room {
     @Id

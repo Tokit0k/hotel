@@ -1,19 +1,19 @@
 package com.ua.tokarenko.hotel.domain;
 
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
-import java.util.Date;
+
 import java.util.List;
 
-@Data
-@Builder
-@Entity
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
+@Builder
+@Data
+@Entity
 @Table
 public class Guest {
     @Id
@@ -30,8 +30,6 @@ public class Guest {
 
     @OneToMany(mappedBy = "guest")
     private List<Reservation> reservations;
-
-
 
 
 }
