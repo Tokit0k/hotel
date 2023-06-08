@@ -1,6 +1,7 @@
 package com.ua.tokarenko.hotel.service;
 
 import com.ua.tokarenko.hotel.repository.GuestRepository;
+import com.ua.tokarenko.hotel.repository.ReservationRepository;
 import org.springframework.stereotype.Service;
 import com.ua.tokarenko.hotel.domain.Guest;
 import com.ua.tokarenko.hotel.dto.GuestDto;
@@ -15,6 +16,7 @@ import java.util.stream.Collectors;
 public class GuestService {
 
     private final GuestRepository guestRepository;
+    private final ReservationRepository reservationRepository;
     public List<GuestDto> findAll() {
         return guestRepository.findAll()
                 .stream()
@@ -78,6 +80,11 @@ public class GuestService {
     }
 
     public Guest save(Guest guest) {
+        if (guest.getReservations() != null) {
+            for (var reservation : guest.getReservations()){
+                reservationRepository.save(reservation);
+            }
+        }
         return guestRepository.save(guest);
     }
 

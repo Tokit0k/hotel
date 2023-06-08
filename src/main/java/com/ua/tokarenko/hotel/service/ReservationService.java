@@ -26,8 +26,8 @@ public class ReservationService {
                         .checkIn(reservation.getCheckIn())
                         .checkOut(reservation.getCheckOut())
                         .reservationDate(reservation.getReservationDate())
-                        .room(reservation.getRoom())
-                        .guest(reservation.getGuest())
+                        .room(reservation.getRoom().toString())
+                        .guest(reservation.getRoom().toString())
                         .build())
                 .collect(Collectors.toList());
 
@@ -43,8 +43,8 @@ public class ReservationService {
                     .checkIn(optionalReservation.get().getCheckIn())
                     .checkOut(optionalReservation.get().getCheckOut())
                     .reservationDate(optionalReservation.get().getReservationDate())
-                    .room(optionalReservation.get().getRoom())
-                    .guest(optionalReservation.get().getGuest())
+                    .room(optionalReservation.get().getRoom().toString())
+                    .guest(optionalReservation.get().getGuest().toString())
                     .build();
         } else {
             throw new RuntimeException("Reservation not found");

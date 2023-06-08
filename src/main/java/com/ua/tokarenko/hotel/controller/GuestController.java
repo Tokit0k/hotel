@@ -20,32 +20,32 @@ public class GuestController {
         return guestService.findAll();
     }
 
-    @GetMapping("/Guest/{id}")
+    @GetMapping("/guest/{id}")
     public GuestDto findById(@PathVariable Long id) {
         return guestService.findById(id);
     }
 
-    @GetMapping("/Guest/find/{name}")
+    @GetMapping("/guest/find/{name}")
     public GuestDto findByName(@PathVariable String name) {
         return guestService.findByName(name);
     }
 
-    @GetMapping("/Guest/find/{passport}")
+    @GetMapping("/guest/find/{passport}")
     public GuestDto findByPassport(@PathVariable String passport) {
         return guestService.findByPassport(passport);
     }
 
-    @PostMapping("/Guest")
+    @PostMapping("/guest")
     public ResponseEntity<Guest> save(@RequestBody Guest guest) {
         return new ResponseEntity<>(guestService.save(guest), HttpStatus.CREATED);
     }
 
-    @PutMapping("/Guest/update/{id}")
+    @PutMapping("/guest/update/{id}")
     public Guest update(@PathVariable Long id, @RequestBody Guest guest) {
         return guestService.update(id, guest);
     }
 
-    @DeleteMapping("/Guest/{id}")
+    @DeleteMapping("/guest/{id}")
     public void deleteGuest(@PathVariable Long id){
         guestService.deleteGuest(id);
     }
