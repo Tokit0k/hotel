@@ -24,7 +24,12 @@ public class Room {
     @Column
     private boolean isReserved;
 
-    @OneToMany(mappedBy = "room")
+    @OneToMany
+    @JoinTable(
+            name = "room_reservation",
+            joinColumns = @JoinColumn(name = "room_id"),
+            inverseJoinColumns = @JoinColumn(name = "reservation_id")
+    )
     private List<Reservation> reservations;
 
 }

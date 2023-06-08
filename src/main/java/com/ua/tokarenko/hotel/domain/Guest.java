@@ -28,7 +28,12 @@ public class Guest {
     @Column
     private Long phoneNumber;
 
-    @OneToMany(mappedBy = "guest")
+    @OneToMany
+    @JoinTable(
+            name = "guest_reservation",
+            joinColumns = @JoinColumn(name = "guest_id"),
+            inverseJoinColumns = @JoinColumn(name = "reservation_id")
+    )
     private List<Reservation> reservations;
 
 

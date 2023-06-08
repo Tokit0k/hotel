@@ -25,12 +25,12 @@ public class GuestController {
         return guestService.findById(id);
     }
 
-    @GetMapping("/guest/find/{name}")
+    @GetMapping("/find/{name}")
     public GuestDto findByName(@PathVariable String name) {
         return guestService.findByName(name);
     }
 
-    @GetMapping("/guest/find/{passport}")
+    @GetMapping("/find-by-passport/{passport}")
     public GuestDto findByPassport(@PathVariable String passport) {
         return guestService.findByPassport(passport);
     }
