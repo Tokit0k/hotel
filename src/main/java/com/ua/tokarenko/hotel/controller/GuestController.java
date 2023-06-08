@@ -15,7 +15,7 @@ import java.util.List;
 public class GuestController {
     private final GuestService guestService;
 
-    @GetMapping("/Guest")
+    @GetMapping("/guest")
     public List<GuestDto> findAll() {
         return guestService.findAll();
     }

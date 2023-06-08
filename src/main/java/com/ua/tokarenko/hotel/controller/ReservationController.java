@@ -23,12 +23,12 @@ public class ReservationController {
         return reservationService.findAll();
     }
 
-    @GetMapping("/reservation/find/{id}")
+    @GetMapping("/Reservation/find/{id}")
     public ReservationDto findById(@PathVariable Long id) {
         return reservationService.findById(id);
     }
 
-    @GetMapping("/reservation/find/{reservationDate}")
+    @GetMapping("/Reservation/find/{reservationDate}")
     public boolean findByReservationDate(@PathVariable Date reservationDate){
         return reservationService.findByReservationDate(reservationDate);
     }
@@ -38,12 +38,12 @@ public class ReservationController {
         return new ResponseEntity<>(reservationService.save(reservation), HttpStatus.CREATED);
     }
 
-    @PutMapping("/reservation/update/{id}")
+    @PutMapping("/Reservation/update/{id}")
     public Reservation update (@PathVariable Long id,@RequestBody Reservation reservation){
     return reservationService.update(id, reservation);
     }
 
-    @DeleteMapping("/reservation/{id}")
+    @DeleteMapping("/Reservation/{id}")
     public void deleteReservation (@PathVariable Long id){
         reservationService.deleteReservation(id);
     }

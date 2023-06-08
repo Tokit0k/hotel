@@ -23,22 +23,22 @@ public class RoomController {
         return roomService.findAll();
     }
 
-    @GetMapping("/room/find/{id}")
+    @GetMapping("/Room/find/{id}")
     public RoomDto findById(@PathVariable Long id) {
         return roomService.findById(id);
     }
 
-    @GetMapping("/room/find/{price}")
+    @GetMapping("/Room/find/{price}")
     public RoomDto findByPrice(@PathVariable Long price) {
         return roomService.findByPrice(price);
     }
 
-    @GetMapping("/room/find/{numberOfBeds}")
+    @GetMapping("/Room/find/{numberOfBeds}")
     public RoomDto findByNumberOfBeds(@PathVariable Long numberOfBeds) {
         return roomService.findByNumberOfBeds(numberOfBeds);
     }
 
-    @GetMapping("/room/find/{isReservation}")
+    @GetMapping("/Room/find/{isReservation}")
     public boolean findByIsReservation(@PathVariable boolean isReservation) {
         return roomService.findByIsReservation(isReservation);
     }
@@ -48,12 +48,12 @@ public class RoomController {
         return new ResponseEntity<>(roomService.save(room), HttpStatus.CREATED);
     }
 
-    @PutMapping("/room/update/{id}")
+    @PutMapping("/Room/update/{id}")
     public Room update(@PathVariable Long id, @RequestBody Room room) {
         return roomService.update(id, room);
     }
 
-    @DeleteMapping("/room/{id}")
+    @DeleteMapping("/Room/{id}")
     public void deleteRoom(@PathVariable Long id) {
         roomService.deleteRoom(id);
     }
